@@ -1,0 +1,265 @@
+// colors
+@import './colors.scss';
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    list-style: none;
+
+    body {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #fff;
+
+        main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 70px 0;
+
+            header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 50px;
+
+                figure {
+                    img {
+                        width: 120px;
+                    }
+                }
+            } // header
+
+            article {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                width: 100%;
+
+                h1 {
+                    font-size: 60px;
+                    font-weight: 300;
+                    color: $gray;
+
+                    strong {
+                        font-size: inherit;
+                        color: $very-dark-blue;
+                    }
+                }
+
+                p {
+                    color: $very-dark-blue;
+                    font-size: 24px;
+                }
+
+                form {
+                    display: flex;
+                    gap: 30px;
+
+                    .input-field {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        span {
+                            font-size: 20px;
+                            color: $light-red;
+                            font-style: italic;
+                            visibility: hidden;
+                        }
+                        
+                        input {
+                            padding: 18px 20px;
+                            width: 500px;
+                            border-radius: 30px;
+                            outline: 0;
+                            border: 3px solid $pale-blue;
+                            height: 55px;
+                            font-size: 1rem;
+    
+                            &::placeholder {
+                                color: $gray;
+                            }
+                        }
+                    }
+
+                    button {
+                        border-radius: 50px;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0 60px;
+                        height: 55px;
+                        background-color: $blue;
+                        color: #fff;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+
+                        &:hover {
+                            opacity: .5;
+                        }
+
+                        &:active {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .dashboard-container {
+                    width: 800px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            } // article
+
+            footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+                width: 100%;
+                gap: 50px;
+
+
+                ul {
+                    display: flex;
+                    gap: 20px;
+
+                    a {
+                        i {
+                            border: 1px solid $pale-blue;
+                            padding: 14px;
+                            border-radius: 50%;
+                            color: $blue;
+                            
+                            &:hover {
+                                background-color: $blue;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        } // main
+    } // body
+
+    @media screen and (max-width: 830px) {
+        body {
+            main {
+
+                
+                    article {
+                        gap: 10px;
+        
+                        h1 {
+                            font-size: 42px;
+        
+                            strong {
+                                font-size: inherit;
+                            }
+                        }
+        
+                        p {
+                            font-size: 20px;
+                        }
+        
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0px;
+        
+                            .input-field {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 5px;
+        
+                                span {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+        
+                        .dashboard-container {
+                            width: 96%;
+                            height: auto;
+        
+                            img {
+                                width: 100%;
+                            }
+                        }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 535px) {
+        body {
+            main {
+                    article {
+                        h1 {
+                            font-size: 32px;
+        
+                            strong {
+                                font-size: inherit;
+                            }
+                        }
+        
+                        p {
+                            font-size: 16px;
+                        }
+        
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0px;
+                            width: 96%;
+        
+                            .input-field {
+                                width: 100%;
+                                span {
+                                    font-size: 14px;
+                                }
+
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                            button {
+                                width: 100%;
+                            }
+                        }
+        
+                        .dashboard-container {
+                            width: 96%;
+                            height: auto;
+        
+                            img {
+                                width: 100%;
+                            }
+                        }
+                }
+            }
+
+            footer {
+                p {
+                    font-size: 16px;
+                }
+
+                ul {
+                   
+                    a {
+                        i {
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} // *
